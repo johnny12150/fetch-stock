@@ -7,9 +7,11 @@ $(document).ready(function () {
         crossDomain: true,
         success: function (response) {
             console.log(response);
+            $('#print').append(response);
         },
         error: function (xhr, status, error) {
             console.log("xhr:" + xhr + '\n' + "status:" + status + '\n' + "error:" + error);
+            $('#print').append(status);
         }
     });
 });
